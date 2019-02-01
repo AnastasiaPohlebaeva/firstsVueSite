@@ -3,14 +3,9 @@
     <div class="header">
       <div class="container">
         <div class="header__inner">
-          <div class="header__item">
-            <router-link tag="a" to="/">Home</router-link>
+          <div class="header__item" v-for="item in $root.pagesArray" :key="item.index">
+            <router-link tag="a" :to="item.link">{{item.title}}</router-link>
           </div>
-          <div class="header__item">
-            <router-link tag="a" to="/catalog">Catalog</router-link>
-          </div>
-          <div class="header__item"><a href="#">About</a></div>
-          <div class="header__item"><a href="#">Contacts</a></div>
         </div>
       </div>
     </div>

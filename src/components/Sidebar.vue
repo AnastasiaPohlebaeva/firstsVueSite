@@ -33,12 +33,14 @@ export default {
 .sidebar {
   width: 250px;
   margin-right: 50px;
-  border: 1px solid black;
 }
 .sidebar__inner,
 .sidebar__inner a{
   display: block;
   text-align: left;
+}
+.sidebar__inner{
+  border: 1px solid black;
 }
 .sidebar__inner a {
   padding: 10px;

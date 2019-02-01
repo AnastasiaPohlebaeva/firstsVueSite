@@ -1,22 +1,19 @@
 <template>
   <div class="content">
-    <div class="box">1</div>
-    <div class="box">2</div>
-    <div class="box">3</div>
-    <div class="box">4</div>
-    <div class="box">5</div>
-    <div class="box">6</div>
+    <div class="box" v-for="item in $root.products" :key="item.index">
+      <router-link
+          tag="a"
+          :key="item.id"
+          :to="{ path: '/catalog/' + item.id, props: { prodName: item.name }}">
+        {{item.id}}: {{item.name}}
+      </router-link>
+    </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'ContentCatalog',
-  data () {
-    return {
-      msg: 'I am ContentCatalog!'
-    }
-  }
+  name: 'ContentCatalog'
 }
 </script>
 
@@ -29,7 +26,7 @@ export default {
   grid-template-columns: repeat(4, minmax(60px, 1fr));
 }
 .box {
-  height: 242px;
+  height: 250px;
   padding: 10px;
   margin: 10px;
   border: 1px solid black;
