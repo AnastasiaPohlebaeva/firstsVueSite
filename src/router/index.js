@@ -1,15 +1,21 @@
 import Vue from 'vue'
 import VueRouter from 'vue-router'
-import Catalog from '../components/Catalog.vue'
+import CatalogPage from '../pages/CatalogPage.vue'
+import HomePage from '../pages/HomePage.vue'
 
 Vue.use(VueRouter)
 
 export default new VueRouter({
   routes: [
     {
-      path: '/',
-      name: 'Catalog',
-      component: Catalog
+      path: '',
+      name: 'HomePage',
+      component: HomePage
+    },
+    {
+      path: '/catalog',
+      name: 'CatalogPage',
+      component: CatalogPage
     }
   ]
 })

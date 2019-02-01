@@ -11,7 +11,7 @@
 
 <script>
 export default {
-  name: 'Content',
+  name: 'ContentCatalog',
   data () {
     return {
       msg: 'I am ContentCatalog!'
@@ -24,10 +24,12 @@ export default {
 <style scoped>
 .content {
   display: grid;
-  width: 500px;
+  width: calc(100% - 250px - 50px);
+  margin: -10px;
   grid-template-columns: repeat(4, minmax(60px, 1fr));
 }
 .box {
+  height: 242px;
   padding: 10px;
   margin: 10px;
   border: 1px solid black;
