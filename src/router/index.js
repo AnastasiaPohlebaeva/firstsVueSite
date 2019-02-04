@@ -22,8 +22,7 @@ export default new VueRouter({
     {
       path: '/catalog/:id',
       name: 'ProductDetailPage',
-      component: ProductDetailPage,
-      props: ''
+      component: ProductDetailPage
     },
     {
       path: '*',

@@ -4,8 +4,8 @@
       <router-link
           tag="a"
           :key="item.id"
-          :to="{ path: '/catalog/' + item.id, props: { prodName: item.name }}">
-        {{item.id}}: {{item.name}}
+          :to="'/catalog/' + item.id">
+        <span v-on:click="someFunction(item)">{{item.id}}: {{item.name}}</span>
       </router-link>
     </div>
   </div>
@@ -13,7 +13,12 @@
 
 <script>
 export default {
-  name: 'ContentCatalog'
+  name: 'ContentCatalog',
+  methods: {
+    someFunction (value) {
+      console.log(value)
+    }
+  }
 }
 </script>
 
